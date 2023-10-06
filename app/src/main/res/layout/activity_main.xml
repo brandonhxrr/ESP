@@ -5,7 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginBottom="48dp"
     tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Conexión con ESP32"
+        android:layout_marginVertical="40dp"
+        android:layout_marginHorizontal="20dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:fontFamily="@font/product_sans_regular"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,13 +25,14 @@
         android:layout_weight="0.5"
         android:orientation="horizontal">
         <androidx.cardview.widget.CardView
+            android:clickable="true"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:layout_margin="20dp"
-            app:cardBackgroundColor="@color/primary"
-            app:cardCornerRadius="32dp"
-            android:elevation="4dp">
+            android:layout_margin="10dp"
+            app:cardCornerRadius="16dp"
+            android:elevation="4dp"
+            android:focusable="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -29,35 +42,32 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:tint="@color/white"
-                    android:src="@drawable/rpm"/>
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/rpm"
+                    android:tint="#362FD9"/>
+                
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="120"
+                    android:text="120 RPM"
                     android:textAlignment="center"
                     android:textStyle="bold"
+                    android:fontFamily="@font/product_sans_regular"
                     android:textSize="24sp"
-                    android:textColor="@color/white"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="RPM"
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textSize="24sp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/primary_text"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:clickable="true"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:layout_margin="20dp"
-            app:cardBackgroundColor="@color/secondary"
-            app:cardCornerRadius="32dp"
-            android:elevation="4dp">
+            android:layout_margin="10dp"
+            
+            app:cardCornerRadius="16dp"
+            android:elevation="4dp"
+            android:focusable="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -67,24 +77,19 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:tint="@color/white"
-                    android:src="@drawable/capacitance"/>
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/capacitance"
+                    android:tint="#54B435"/>
+                
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="60"
+                    android:text="60 nF"
                     android:textAlignment="center"
                     android:textStyle="bold"
+                    android:fontFamily="@font/product_sans_regular"
                     android:textSize="24sp"
-                    android:textColor="@color/white"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="nF"
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textSize="24sp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/primary_text"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -97,13 +102,15 @@
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
+            android:clickable="true"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:layout_margin="20dp"
-            app:cardBackgroundColor="@color/secondary"
-            app:cardCornerRadius="32dp"
-            android:elevation="4dp">
+            android:layout_margin="10dp"
+            
+            app:cardCornerRadius="16dp"
+            android:elevation="4dp"
+            android:focusable="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -113,35 +120,32 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:tint="@color/white"
-                    android:src="@drawable/thermostat"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textSize="24sp"
-                    android:textColor="@color/white"/>
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/thermostat"
+                    android:tint="#82AAE3"/>
+                
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="24 °C"
                     android:textAlignment="center"
                     android:textStyle="bold"
+                    android:fontFamily="@font/product_sans_regular"
                     android:textSize="24sp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/primary_text"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:clickable="true"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:layout_margin="20dp"
-            app:cardBackgroundColor="@color/primary"
-            app:cardCornerRadius="32dp"
-            android:elevation="4dp">
+            android:layout_margin="10dp"
+            app:cardCornerRadius="16dp"
+            android:elevation="4dp"
+            android:focusable="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -151,23 +155,19 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:tint="@color/white"
-                    android:src="@drawable/voltage"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    android:textSize="24sp"
-                    android:textColor="@color/white"/>
+                    android:layout_marginBottom="30dp"
+                    android:src="@drawable/voltage"
+                    android:tint="#FFB000"/>
+                
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="5 V"
                     android:textAlignment="center"
                     android:textStyle="bold"
+                    android:fontFamily="@font/product_sans_regular"
                     android:textSize="24sp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/primary_text"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
