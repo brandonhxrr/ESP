@@ -60,8 +60,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun fetchDataFromESP32(ip: String) {
         try {
-            //val url = URL("http://$ip:8080/")
-            val url = URL("https://9d95-201-141-109-189.ngrok.io/")
+            val url = URL("http://$ip/")
+            //val url = URL("https://9d95-201-141-109-189.ngrok.io/")
             val connection = url.openConnection() as HttpURLConnection
             connection.requestMethod = "GET"
 
@@ -82,12 +82,12 @@ class MainActivity : AppCompatActivity() {
                 val temperature = json.getDouble("temperatura")
                 val voltage = json.getDouble("voltaje")
 
-                val capacitanceUnits = if (capacitance < 1E-6) "pF" else "nF"
+                val isMagneticField = if(capacitance == 100.0) "No" else "Si"
 
                 Handler(Looper.getMainLooper()).post {
-                    tvRPM.text = String.format("%.2f rpm", rpm)
+                    tvRPM.text = String.format("%.0f rpm", rpm)
                     tvTemp.text = String.format("%.2f °C", temperature)
-                    tvCapacitance.text = String.format("%.2f %s", capacitance, capacitanceUnits)
+                    tvCapacitance.text = isMagneticField
                     tvVoltage.text = String.format("%.2f V", voltage)
                 }
 
