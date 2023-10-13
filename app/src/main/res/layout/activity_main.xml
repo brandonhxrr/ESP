@@ -19,6 +19,41 @@
         android:textSize="24sp"
         android:fontFamily="@font/product_sans_regular"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Introduce la IP del servidor:"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:fontFamily="@font/product_sans_regular"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_ip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dirección IP"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginVertical="30dp"/>
+
+    <Button
+        android:id="@+id/btn_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:text="Conectar"
+        android:backgroundTint="#362FD9"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -47,13 +82,14 @@
                     android:tint="#362FD9"/>
                 
                 <TextView
+                    android:id="@+id/tvRPM"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="120 RPM"
                     android:textAlignment="center"
                     android:textStyle="bold"
                     android:fontFamily="@font/product_sans_regular"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textColor="@color/primary_text"/>
             </LinearLayout>
 
@@ -78,17 +114,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginBottom="30dp"
-                    android:src="@drawable/capacitance"
+                    android:src="@drawable/iman"
                     android:tint="#54B435"/>
                 
                 <TextView
+                    android:id="@+id/tvCapacitance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="60 nF"
+                    android:text="Sí"
                     android:textAlignment="center"
                     android:textStyle="bold"
                     android:fontFamily="@font/product_sans_regular"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textColor="@color/primary_text"/>
             </LinearLayout>
 
@@ -125,13 +162,14 @@
                     android:tint="#82AAE3"/>
                 
                 <TextView
+                    android:id="@+id/tvTemperature"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="24 °C"
                     android:textAlignment="center"
                     android:textStyle="bold"
                     android:fontFamily="@font/product_sans_regular"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textColor="@color/primary_text"/>
             </LinearLayout>
 
@@ -160,13 +198,14 @@
                     android:tint="#FFB000"/>
                 
                 <TextView
+                    android:id="@+id/tvVoltage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="5 V"
                     android:textAlignment="center"
                     android:textStyle="bold"
                     android:fontFamily="@font/product_sans_regular"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textColor="@color/primary_text"/>
             </LinearLayout>
 
